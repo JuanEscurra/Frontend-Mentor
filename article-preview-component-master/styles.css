@@ -80,14 +80,12 @@ body {
     border: 0;
     border-radius: 50%;
     background-color: var(--LightGrayishBlue);
-    color: red;
     padding: 5px;
-    fill: #FFFFFC;
 }
 
-#btnShare > svg {
-    fill: #FFFFFC;
-}
+/* #btnShare > svg > path {
+    fill: var(--LightGrayishBlue);
+} */
 
 #btnShare:focus {
     outline: 0;
@@ -102,7 +100,7 @@ body {
     width: 250px;
     height: 55px;
     display: none;
-    background-color: var(--DesaturatedDarkBlue);
+    background-color: var(--VeryDarkGrayishBlue);
     border-radius: 10px;
     position: absolute;
     top: -75px;
@@ -118,7 +116,7 @@ body {
     content: "";
     width: 0;
     height: 0;
-    border-top: 15px solid var(--DesaturatedDarkBlue);
+    border-top: 15px solid var(--VeryDarkGrayishBlue);
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
 }
@@ -134,6 +132,7 @@ body {
 }
 
 .card__social > li:nth-child(1) {
+    color: var(--LightGrayishBlue);
     text-transform: uppercase;
 
 }
@@ -167,4 +166,26 @@ body {
     .card__content > p {
         line-height: 20px;
     }
-}
+
+    .card__share {
+        width: 92vw;
+        height: 85px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        top: -20px;
+        left: -35px;
+    }
+
+    .card__share::before {
+        display: none;
+    }
+
+    .card__social {
+        padding-left: 30px;
+        justify-content: flex-start;
+    }
+
+    #btnShare {
+        z-index: 100;
+    }
+} 
