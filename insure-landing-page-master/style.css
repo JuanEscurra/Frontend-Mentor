@@ -337,6 +337,7 @@ body {
 
 .footer__item a {
     text-decoration: none;
+    color: var(--VeryDarkViolet);
 }
 
 .footer__item a:hover {
